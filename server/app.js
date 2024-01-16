@@ -14,15 +14,21 @@ app.use(
 
 
 
-require('./models/model')
-require('./models/post')
-app.use(express.json())
-app.use(require("./routes/auth"))
-app.use(require("./routes/createPost"))
-app.use(require("./routes/user"))
+
+
+require('./models/model');
+require('./models/post');
+
+
+app.use(express.json());
+
+
+app.use(require("./routes/auth"));
+app.use(require("./routes/createPost"));
+app.use(require("./routes/user"));
 
 app.use("/", (req,res)=>{
-    res.send("server running")
+    res.send("server running");
 })
 
 
